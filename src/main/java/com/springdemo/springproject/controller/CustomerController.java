@@ -15,14 +15,10 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/list")
+    @GetMapping("/{name}")
     @ResponseBody
-    public List<Customer> getList(){
-        return customerService.getList();
+    public List<Customer> getList(@PathVariable String name ){
+        return customerService.getList(name);
     }
-
-
-
-
 
 }

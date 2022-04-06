@@ -37,7 +37,7 @@ public class CustomerService {
 
 
     }
-    public  List<Customer> getList(){
+    public  List<Customer> getList(String name){
         return list;
     }
 }

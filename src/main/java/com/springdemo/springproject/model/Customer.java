@@ -1,13 +1,17 @@
 package com.springdemo.springproject.model;
 
+//import javax.persistence.*;
+
 import javax.persistence.*;
 
 @Entity
 public class Customer {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+
+
+         @Id
+         @GeneratedValue(strategy = GenerationType.AUTO)
+   @Column(name = "ID")
     private Long id;
 
     @Column(name = "name")
@@ -52,4 +56,6 @@ public class Customer {
     public void setLocation(String location) {
         this.location = location;
     }
+
+
 }
