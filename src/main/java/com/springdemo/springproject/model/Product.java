@@ -2,7 +2,7 @@ package com.springdemo.springproject.model;
 
 public class Product {
 
-    public  int id;
+    public  int pid;
     public  String name;
     public int batchNo;
     public  int price;
@@ -14,19 +14,19 @@ public class Product {
 
     public Product(int id, String name, int batchNo, int price, int noOfProduct) {
        super();
-        this.id = id;
+        this.pid = id;
         this.name = name;
         this.batchNo = batchNo;
         this.price = price;
         this.noOfProduct = noOfProduct;
     }
 
-    public int getId() {
-        return id;
+    public int getPid() {
+        return pid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPid(int pid) {
+        this.pid = pid;
     }
 
     public String getName() {
@@ -60,4 +60,6 @@ public class Product {
     public void setNoOfProduct(int noOfProduct) {
         this.noOfProduct = noOfProduct;
     }
+
+
 }
