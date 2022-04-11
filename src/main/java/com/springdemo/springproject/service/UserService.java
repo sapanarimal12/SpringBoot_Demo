@@ -5,10 +5,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface UserService {
 
-     public User login(String username, String password);
 
     public List<User> getAllUser();
     public  User getUserById(Long id);
