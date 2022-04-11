@@ -46,24 +46,24 @@ public class UserController {
         return userService.getAllUser();
     }
 
-    @GetMapping("/login")
-    public ModelAndView login(){
-        ModelAndView modelAndView=new ModelAndView("login");
-        modelAndView.addObject("user",new User());
-        return modelAndView;
-    }
-
-    @PostMapping("/login")
-    public  String login(@ModelAttribute("user") User user){
-
-        User authUser1=userService.login(user.getUsername(),user.getPassword());
-        System.out.println(authUser1);
-        if(Objects.nonNull(authUser1)){
-            return "redirect:/";
-
-        }
-        else {
-            return "redirect:/login";
-        }
-    }
+//    @GetMapping("/login")
+//    public ModelAndView login(){
+//        ModelAndView modelAndView=new ModelAndView("login");
+//        modelAndView.addObject("user",new User());
+//        return modelAndView;
+//    }
+//
+//    @PostMapping("/login")
+//    public  String login(@ModelAttribute("user") User user){
+//
+//        User authUser1=userService.login(user.getUsername(),user.getPassword());
+//        System.out.println(authUser1);
+//        if(Objects.nonNull(authUser1)){
+//            return "redirect:/";
+//
+//        }
+//        else {
+//            return "redirect:/login";
+//        }
+//    }
 }

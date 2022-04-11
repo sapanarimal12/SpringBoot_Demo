@@ -2,17 +2,22 @@ package com.springdemo.springproject.repository;
 
 import com.springdemo.springproject.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.awt.image.LookupOp;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends CrudRepository<User,Long> {
-    User findAllById(Long id);
+public interface UserRepository extends JpaRepository<User,Long> {
 
-    User findByUsernameAndPassword(String  username, String  password);
+  @NotBlank
+  @Email
+  Optional<User> findByEmail(String  email);
 
+  @NotBlank
+  @Email
+  Optional<User> findByEmailAndPassword(String email, @NotBlank String password);
 
+  User findAllById(Long id);
 }
